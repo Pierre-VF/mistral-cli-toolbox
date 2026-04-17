@@ -1,0 +1,14 @@
+active_model = "model_infomaniak"
+
+[[providers]]
+name = "infomaniak"
+api_base = "https://api.infomaniak.com/2/ai/PRODUCT_ID/openai/v1"
+api_style = "openai"
+backend = "generic"
+api_key_env_var = "INFOMANIAK_AI_TOKEN"
+
+[[models]]
+name = "mistral3"
+# Options available = mistral3,qwen3,moonshotai/Kimi-K2.5
+provider = "infomaniak"
+alias = "model_infomaniak"
