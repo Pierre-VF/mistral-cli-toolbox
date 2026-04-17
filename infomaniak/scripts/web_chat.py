@@ -19,6 +19,7 @@ from pydantic_settings import BaseSettings
 class _Settings(BaseSettings):
     INFOMANIAK_AI_TOKEN: str
     INFOMANIAK_PROJECT_ID: str
+    INFOMANIAK_MODEL: str
 
 
 load_dotenv()
@@ -26,13 +27,16 @@ s = _Settings()
 
 
 model = OpenAIChatModel(
-    "mistral3",
+    s.INFOMANIAK_MODEL,
     provider=OpenAIProvider(
         api_key=s.INFOMANIAK_AI_TOKEN,
         base_url=f"https://api.infomaniak.com/2/ai/{s.INFOMANIAK_PROJECT_ID}/openai/v1",
     ),
 )
-agent = Agent(model)
+agent = Agent(
+    model,
+    system_prompt="",
+)
 
 
 uvicorn.run(
