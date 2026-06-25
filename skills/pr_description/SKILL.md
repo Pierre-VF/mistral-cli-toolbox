@@ -18,3 +18,5 @@ The output ignores:
 
 The evaluation ignores:
 - Any file covered by `.gitignore`
+
+If there is no difference between branches, just say it and exit.
