@@ -3,6 +3,10 @@ name: pr-description
 description: Use this skill when asked to generate a description for a pull request (PR). This will generate a title and description for the PR.
 license: MIT
 user-invocable: true
+allowed-tools:
+  - read_file
+  - grep
+  - ask_user_question
 ---
 
 # PR description
@@ -13,7 +17,7 @@ The output consists of:
 - A title for the PR
 - A description for the PR, in Markdown format for copy-pasting by the user.
 
-The output ignores:
+The output should not contain:
 - Trivial input (e.g. number of lines changed, added or deleted)
 
 ## Evaluation
