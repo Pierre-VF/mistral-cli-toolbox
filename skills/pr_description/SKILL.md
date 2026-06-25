@@ -1,6 +1,6 @@
 ---
 name: pr-description
-description: Generates a description of a PR
+description: Use this skill when asked to generate a description for a pull request (PR). This will generate a title and description for the PR.
 license: MIT
 user-invocable: true
 ---

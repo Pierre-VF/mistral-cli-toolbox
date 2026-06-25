@@ -1,6 +1,6 @@
 ---
 name: pr-review
-description: Perform automated code reviews.
+description: Use this skill when asked to generate a code review for a pull request (PR). This will review the code that was produced.
 license: MIT
 user-invocable: true
 ---
