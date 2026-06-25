@@ -9,8 +9,7 @@ user-invocable: true
 
 Generate a Pull Request review of the current branch against the `origin/main` branch.
 
-
-## Overall guidelines
+## Overall guidelines
 
 The evaluation ignores:
 - Any file covered by `.gitignore`
@@ -24,4 +23,4 @@ Pay specific attention to the following:
 - Typos
 - Implementation of docstrings in public methods
 - Logic gaps and edge-cases
-- Maintainability of the codes
+- Maintainability of the code
