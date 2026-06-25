@@ -1,8 +1,12 @@
 ---
 name: pr-description
-description: Generates a description of a PR
+description: Use this skill when asked to generate a description for a pull request (PR). This will generate a title and description for the PR.
 license: MIT
 user-invocable: true
+allowed-tools:
+  - read_file
+  - grep
+  - ask_user_question
 ---
 
 # PR description
@@ -11,10 +15,14 @@ Generate a Pull Request description of the current branch against the `origin/ma
 
 The output consists of:
 - A title for the PR
-- A description for the PR, in Mardown format for copy-pasting by the user.
+- A description for the PR, in Markdown format for copy-pasting by the user.
 
-The output ignores:
+The output should not contain:
 - Trivial input (e.g. number of lines changed, added or deleted)
+
+## Evaluation
 
 The evaluation ignores:
 - Any file covered by `.gitignore`
+
+If there is no difference between branches, just say it and exit.
