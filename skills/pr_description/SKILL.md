@@ -7,12 +7,14 @@ user-invocable: true
 
 # PR description
 
-This skill generates a Pull Request description of the current branch against the `origin/main` branch.
+Generate a Pull Request description of the current branch against the `origin/main` branch.
 
-The skill generates:
+The output consists of:
 - A title for the PR
 - A description for the PR, in Mardown format for copy-pasting by the user.
 
-The skill ignores:
+The output ignores:
 - Trivial input (e.g. number of lines changed, added or deleted)
+
+The evaluation ignores:
 - Any file covered by `.gitignore`

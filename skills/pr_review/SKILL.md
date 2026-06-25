@@ -7,7 +7,7 @@ user-invocable: true
 
 # PR review skill
 
-This skill generates a Pull Request review of the current branch against the `origin/main` branch.
+Generate a Pull Request review of the current branch against the `origin/main` branch.
 
-The skill ignores:
+The evaluation ignores:
 - Any file covered by `.gitignore`
