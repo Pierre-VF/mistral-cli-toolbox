@@ -13,6 +13,7 @@ Generate a Pull Request review of the current branch against the `origin/main` b
 
 The evaluation ignores:
 - Any file covered by `.gitignore`
+- Large data files (JSON, CSV, ...)
 
 If there is no difference between branches, just say it and exit.
 
